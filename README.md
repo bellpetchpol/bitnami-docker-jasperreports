@@ -339,6 +339,20 @@ This would be an example of SMTP configuration using a GMail account:
     -v /your/local/path/bitnami/jasperreports:/bitnami \
     bitnami/jasperreports
 ```
+### View Jasperserver.logs
+
+Add this line in the jasperreports volumes section of **docker-compose.yml**
+```
+- ./your-path/your-folder:/bitnami/tomcat/data/jasperserver/WEB-INF/logs
+```
+Actually you can view any file in the jasperserver with this method
+
+### Add new font.jar
+
+Add this line in the jasperreports volumes section of **docker-compose.yml**
+```
+- ./your-path/fontname.jar:/bitnami/tomcat/data/jasperserver/WEB-INF/lib/fontname.jar:ro
+```
 
 # Contributing
 
